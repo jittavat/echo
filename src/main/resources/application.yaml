@@ -1,0 +1,10 @@
+app:
+  echo-api: ${ECHO_API:http://postman-echo.com/get}
+spring:
+  cache:
+    type: redis
+    redis:
+      time-to-live: ${CACHE_LIFE_TIME:10m}
+  redis:
+    host: ${REDIS_HOST:redis}
+    port: ${REDIS_PORT:6379}

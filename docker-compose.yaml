@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  web:
+    image: test-echo:latest
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+    networks:
+      - main
+  redis:
+    image: "redis:alpine"
+    networks:
+      - main
+networks:
+  main:
